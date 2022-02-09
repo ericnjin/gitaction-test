@@ -22,4 +22,4 @@ COPY --chown=0:0 --from=builder /dist /app/
 EXPOSE 9111
 
 ENTRYPOINT ["/app/server"]
-CMD ["-port", "9110"]
+CMD ["-port", "9119"]
