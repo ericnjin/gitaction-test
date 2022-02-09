@@ -1,13 +1,7 @@
-FROM node:lts-alpine
-
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-COPY app.js ./
-
+FROM node:10
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-
+COPY . /app
+CMD node app.js
 EXPOSE 8080
-
-CMD ["npm", "start"]
